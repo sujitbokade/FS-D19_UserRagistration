@@ -8,10 +8,10 @@ import java.util.regex.Pattern;
 public class UserRagistration {
     public static void main(String[] args) {
         UserRagistration userRegistration = new UserRagistration();
-//            userRegistration.validFirstName();
-//            userRegistration.validLastName();
-//        userRegistration.validateEmail();
-        userRegistration.validMobileNumber();
+            userRegistration.validFirstName();
+            userRegistration.validLastName();
+            userRegistration.validateEmail();
+            userRegistration.validMobileNumber();
     }
 
     public void validFirstName() {
