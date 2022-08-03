@@ -7,8 +7,9 @@ import java.util.regex.Pattern;
 public class UserRagistration {
     public static void main(String[] args) {
             UserRagistration userRegistration = new UserRagistration();
-            userRegistration.validFirstName();
-            userRegistration.validLastName();
+//            userRegistration.validFirstName();
+//            userRegistration.validLastName();
+            userRegistration.validateEmail();
         }
         public void validFirstName(){
             Pattern pattern = Pattern.compile("^[A-Z]+[a-zA-Z]{2,}[0-9]*$");
@@ -36,4 +37,18 @@ public class UserRagistration {
         else
             System.out.println("Last Name is InValid");
     }
-}
+    public void validateEmail(){
+        Pattern pattern = Pattern.compile("^[a-z]*.[a-z]+@[a-z]+.[a-z]{2,3}(.[a-z]{2})*$");
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter User EmailId: ");
+            String emailId = scanner.next();
+
+            Matcher match = pattern.matcher(emailId);
+            if (match.matches())
+                System.out.println("Email is Valid");
+            else
+                System.out.println("Email is InValid");
+        }
+    }
+
