@@ -8,10 +8,10 @@ import java.util.regex.Pattern;
 public class UserRagistration {
     public static void main(String[] args) {
         UserRagistration userRegistration = new UserRagistration();
-            userRegistration.validFirstName();
-            userRegistration.validLastName();
-            userRegistration.validateEmail();
-            userRegistration.validMobileNumber();
+//            userRegistration.validFirstName();
+//            userRegistration.validLastName();
+//            userRegistration.validateEmail();
+//            userRegistration.validMobileNumber();
             userRegistration.validPassword();
     }
 
@@ -71,7 +71,7 @@ public class UserRagistration {
 
     }
     public void validPassword(){
-        Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{7}$");
+        Pattern pattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8}$");
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Password: ");
