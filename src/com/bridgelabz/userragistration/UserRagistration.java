@@ -8,10 +8,10 @@ import java.util.regex.Pattern;
 public class UserRagistration {
     public static void main(String[] args) {
         UserRagistration userRegistration = new UserRagistration();
-//            userRegistration.validFirstName();
-//            userRegistration.validLastName();
-//            userRegistration.validateEmail();
-//            userRegistration.validMobileNumber();
+            userRegistration.validFirstName();
+            userRegistration.validLastName();
+            userRegistration.validateEmail();
+            userRegistration.validMobileNumber();
             userRegistration.validPassword();
     }
 
@@ -71,17 +71,17 @@ public class UserRagistration {
 
     }
     public void validPassword(){
-        Pattern pattern = Pattern.compile("^[a-z]{8}$");
+        Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{7}$");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter User Mobile Number: ");
+        System.out.println("Enter Password: ");
         String password = scanner.next();
 
         Matcher match = pattern.matcher(password);
         if (match.matches())
-            System.out.println("Mobile Number is Valid");
+            System.out.println("Password is Valid");
         else
-            System.out.println("Mobile Number is InValid");
+            System.out.println("Password is InValid");
 
     }
 }
